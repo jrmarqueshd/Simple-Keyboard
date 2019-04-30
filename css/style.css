@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@keyframes keyAnimation{
+    0%{
+        background-color: #F0F0F0;
+        color: #3C618E;
+    }
+
+    100%{
+        background-color: #3C618E;
+        color: #F0F0F0;
+    }
+}
+
+@-o-keyframes keyAnimation{
+    0%{
+        background-color: #F0F0F0;
+        color: #3C618E;
+    }
+
+    100%{
+        background-color: #3C618E;
+        color: #F0F0F0;
+    }
+}
+
+@-moz-keyframes keyAnimation{
+    0%{
+        background-color: #F0F0F0;
+        color: #3C618E;
+    }
+
+    100%{
+        background-color: #3C618E;
+        color: #F0F0F0;
+    }
+}
+
+@-webkit-keyframes keyAnimation{
+    0%{
+        background-color: #F0F0F0;
+        color: #3C618E;
+    }
+
+    100%{
+        background-color: #3C618E;
+        color: #F0F0F0;
+    }
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    padding: 10px;
+    width: 100%;
+}
+
+nav.main-keyboard{
+    background: #F0F0F0;
+    border: 2px solid #3C618E;
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 767px;
+    padding: 10px;
+}
+
+nav.main-keyboard div.keyboard-list{
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav.main-keyboard div.keyboard-list button{
+    animation: keyAnimation 987ms ease-in-out;
+        -moz-animation: keyAnimation 987ms ease-in-out;
+        -ms-zoom-animation: keyAnimation 987ms ease-in-out;
+        -o-animation: keyAnimation 987ms ease-in-out;
+        -webkit-animation: keyAnimation 987ms ease-in-out;
+    background-color: #F0F0F0;
+    border: 1px solid #3C618E;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2em;
+    height: 60px;
+    margin: 5px;
+    width: 60px;
+}
+
+nav.main-keyboard div.keyboard-list button:hover{
+    background-color: #3C618E;
+    box-shadow: 0px 0px 4px #000;
+    color: #F0F0F0;
+}
+
+nav.main-keyboard div.keyboard-list button::selection,
+nav.main-keyboard div.keyboard-list button::-moz-selection{
+    background-color: transparent;
+}
+
+nav.main-keyboard div.keyboard-list .space{
+    width: 68%;
+}
+
+@media screen and (max-width: 767px){
+    nav.main-keyboard{
+        display: none;
+    }
+}
