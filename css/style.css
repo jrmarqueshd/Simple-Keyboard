@@ -109,10 +109,6 @@ nav.main-keyboard div.keyboard-list button::-moz-selection{
     background-color: transparent;
 }
 
-nav.main-keyboard div.keyboard-list .clear{
-    font-size: 1em; 
-}
-
 nav.main-keyboard div.keyboard-list .space{
     width: 68%;
 }
