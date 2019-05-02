@@ -26,13 +26,21 @@ window.addEventListener("load", ()=>{
             $input.value = $input.value + e.value;
 
             // Limpar o campo
-            // * Verifico se a tecla clicada contem a classe clear
+            // * Verifico se o elemento clicado contem a classe clear
             if(e.classList.contains("clear")){
                 // se tiver a classe clear, ela limpa o conteúdo do input
                 $input.value = "";
             }
 
+            // Apagar último digito do campo
+            // * Verifico se o elemento contem a classe backspace
             if(e.classList.contains("backspace")){
+                // se tiver eu defino que o valor do input vai receber a cadeia de caracteres -1.
+                // * $input.value.substring() retorna a cadeia de caracteres seguindo os paramentros
+                // * $input.value.substring(onde começa, (qual a posição que eu quero pegar)).
+                
+                // ** Fonte principal de pesquisa ( http://rogeralmeida.com.br/blog/2011/06/03/retirar-ultimo-caractere-de-string-em-javascript-e-php/ ).
+                // ** Fonte principal de pesquisa ( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring ). 
                 $input.value = $input.value.substring(0, ($input.value.length - 1));
             }
         })
