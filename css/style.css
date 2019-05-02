@@ -77,6 +77,10 @@ nav.main-keyboard div.keyboard-list{
     text-align: center;
 }
 
+/* nav.main-keyboard div.keyboard-list.non-letter{
+    display: flex;
+} */
+
 nav.main-keyboard div.keyboard-list button{
     animation: keyAnimation 987ms ease-in-out;
         -moz-animation: keyAnimation 987ms ease-in-out;
@@ -103,6 +107,10 @@ nav.main-keyboard div.keyboard-list button:hover{
 nav.main-keyboard div.keyboard-list button::selection,
 nav.main-keyboard div.keyboard-list button::-moz-selection{
     background-color: transparent;
+}
+
+nav.main-keyboard div.keyboard-list .clear{
+    font-size: 1em; 
 }
 
 nav.main-keyboard div.keyboard-list .space{

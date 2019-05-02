@@ -15,12 +15,26 @@ window.addEventListener("load", ()=>{
             
             // regra utilizada:
             // * $input.value, pego o valor atual do input do formulário
+
             // ** $input.value = $input.value + e.value, ordeno que o valor atual do input receberá
-            // ** o valor atual do YouTube mais o valor do elemento que eu cliquei.
+            // ** o valor atual do input mais o valor do elemento que eu cliquei.
+
             // *** ( $input.value = ... ) Dessa forma eu já imprimo o valor direto no .value do meu elemento
+
             // **** Fonte principal de pesquisa ( https://www.youtube.com/watch?v=dbVHI0x3lj0&t=336s ).
 
             $input.value = $input.value + e.value;
+
+            // Limpar o campo
+            // * Verifico se a tecla clicada contem a classe clear
+            if(e.classList.contains("clear")){
+                // se tiver a classe clear, ela limpa o conteúdo do input
+                $input.value = "";
+            }
+
+            
         })
     });
+
+
 });
