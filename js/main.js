@@ -23,5 +23,4 @@ window.addEventListener("load", ()=>{
             $input.value = $input.value + e.value;
         })
     });
-
 });
