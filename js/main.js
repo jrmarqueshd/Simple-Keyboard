@@ -43,8 +43,22 @@ window.addEventListener("load", ()=>{
                 // ** Fonte principal de pesquisa ( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring ). 
                 $input.value = $input.value.substring(0, ($input.value.length - 1));
             }
+
+            if(e.classList.contains("capslock")){
+                $keyboard.forEach((t)=>{
+                    let valor = 0;
+
+                    if(valor == 0){
+                        t.style.textTransform = "lowercase";
+                        valor ++;
+                        console.log("0)"+ valor);
+                    }else{
+                        t.style.textTransform = "uppercase";
+                        valor--;
+                        console.log("1)"+ valor);
+                    }
+                })
+            }   
         })
     });
-
-
 });
