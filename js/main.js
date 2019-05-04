@@ -48,10 +48,14 @@ window.addEventListener("load", ()=>{
                 
                 $keyboard.forEach((t)=>{
                     t.classList.toggle("-caps-active");
-                    
                 });
                 e.classList.remove("-caps-active");
             }   
+
+            if(e.classList.contains("-caps-active")){
+                let rem = $input.value.substring(0, ($input.value.length - 1))
+                $input.value = rem + e.value.toUpperCase();
+            }
         });
     });
 });
