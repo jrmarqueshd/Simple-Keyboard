@@ -113,6 +113,10 @@ nav.main-keyboard div.keyboard-list .space{
     width: 68%;
 }
 
+nav.main-keyboard div.keyboard-list .key.-caps-active{
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 767px){
     nav.main-keyboard{
         display: none;

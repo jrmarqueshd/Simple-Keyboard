@@ -45,20 +45,13 @@ window.addEventListener("load", ()=>{
             }
 
             if(e.classList.contains("capslock")){
+                
                 $keyboard.forEach((t)=>{
-                    let valor = 0;
-
-                    if(valor == 0){
-                        t.style.textTransform = "lowercase";
-                        valor ++;
-                        console.log("0)"+ valor);
-                    }else{
-                        t.style.textTransform = "uppercase";
-                        valor--;
-                        console.log("1)"+ valor);
-                    }
-                })
+                    t.classList.toggle("-caps-active");
+                    
+                });
+                e.classList.remove("-caps-active");
             }   
-        })
+        });
     });
 });
