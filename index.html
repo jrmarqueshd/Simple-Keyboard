@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 <body>
-    <input type="text" />
-
+    <input id="input" type="text" />
     <nav class="main-keyboard">
         <div class="keyboard-list">
             <button class="key" value="q">q</button>
@@ -46,6 +45,7 @@
             <button class="key" value="b">b</button>
             <button class="key" value="n">n</button>
             <button class="key" value="m">m</button>
+            <button class="key key-numeric"><i class="fas fa-sort-numeric-up"></i></button>
         </div>
 
         <div class="keyboard-list non-letter">
@@ -55,7 +55,7 @@
             <button class="key capslock">Aa</button>
         </div>
 
-        <div class="keyboard-list">
+        <div id="numericList" class="keyboard-list -numeric-list">
             <button class="key" value="1">1</button>
             <button class="key" value="2">2</button>
             <button class="key" value="3">3</button>

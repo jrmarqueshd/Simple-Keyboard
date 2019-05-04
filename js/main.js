@@ -1,11 +1,15 @@
 window.addEventListener("load", ()=>{
 
     // Chamando o input do formulário
-    let $input = document.querySelector("input");
+    let $input = document.getElementById("input");
 
     // Chamando cada tecla do teclado virtual
     // * O value do elemento já foi setado diretamente no próprio HTML
     let $keyboard = document.querySelectorAll(".key");
+
+    // Chamando o teclado númerico
+    // * Esse elemento já está setado com display none por default
+    let $numericKeyboard = document.getElementById("numericList");
 
     // Percorrendo todos os elementos do meu teclado para te-los carregados na window
     $keyboard.forEach((e)=>{
@@ -65,6 +69,10 @@ window.addEventListener("load", ()=>{
                 // ** Fonte principal de pesquisa ( http://rogeralmeida.com.br/blog/2011/06/03/retirar-ultimo-caractere-de-string-em-javascript-e-php/ ).
                 // ** Fonte principal de pesquisa ( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring ). 
                 $input.value = $input.value.substring(0, ($input.value.length - 1));
+            }
+
+            if(e.classList.contains("key-numeric")){
+                $numericKeyboard.classList.toggle("-numeric-list");
             }
         });
     });

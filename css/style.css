@@ -1,5 +1,7 @@
+/* Imports */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+/* Animations */
 @keyframes keyAnimation{
     0%{
         background-color: #F0F0F0;
@@ -48,6 +50,12 @@
     }
 }
 
+/* Generics Styles */
+/* .-show{
+    display: block;
+} */
+
+/* General Styles */
 body{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -60,6 +68,7 @@ input{
     width: 100%;
 }
 
+/* Styles on Elements */
 nav.main-keyboard{
     background: #F0F0F0;
     border: 2px solid #3C618E;
@@ -81,13 +90,17 @@ nav.main-keyboard div.keyboard-list{
     text-align: center;
 }
 
+nav.main-keyboard div.keyboard-list.-numeric-list{
+    display: none;
+}
+
 nav.main-keyboard div.keyboard-list button{
     animation: keyAnimation 987ms ease-in-out;
         -moz-animation: keyAnimation 987ms ease-in-out;
         -ms-zoom-animation: keyAnimation 987ms ease-in-out;
         -o-animation: keyAnimation 987ms ease-in-out;
         -webkit-animation: keyAnimation 987ms ease-in-out;
-    background-color: #F0F0F0;
+    background-color: #F0F0F0;  
     border: 1px solid #3C618E;
     border-radius: 5px;
     cursor: pointer;
@@ -117,6 +130,7 @@ nav.main-keyboard div.keyboard-list .key.-caps-active{
     text-transform: uppercase;
 }
 
+/* Styles on BreakPoints */
 @media screen and (max-width: 767px){
     nav.main-keyboard{
         display: none;
