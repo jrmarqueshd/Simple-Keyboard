@@ -95,6 +95,12 @@ nav.main-keyboard div.keyboard-list.-symbol-list{
     display: none;
 }
 
+nav.main-keyboard div#symbolList{
+    height: 90px;
+    overflow-y: scroll;
+    overflow: -webkit-paged-x;
+}
+
 nav.main-keyboard div.keyboard-list button{
     animation: keyAnimation 987ms ease-in-out;
         -moz-animation: keyAnimation 987ms ease-in-out;
