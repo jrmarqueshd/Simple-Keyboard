@@ -90,7 +90,8 @@ nav.main-keyboard div.keyboard-list{
     text-align: center;
 }
 
-nav.main-keyboard div.keyboard-list.-numeric-list{
+nav.main-keyboard div.keyboard-list.-numeric-list,
+nav.main-keyboard div.keyboard-list.-symbol-list{
     display: none;
 }
 

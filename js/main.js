@@ -11,6 +11,10 @@ window.addEventListener("load", ()=>{
     // * Esse elemento já está setado com display none por default
     let $numericKeyboard = document.getElementById("numericList");
 
+    // Chamando o teclado de caracteres especiais
+    // * Esse elemento já está setado com display none por default
+    let $symbolKeyboard = document.getElementById("symbolList");
+
     // Percorrendo todos os elementos do meu teclado para te-los carregados na window
     $keyboard.forEach((e)=>{
 
@@ -73,6 +77,10 @@ window.addEventListener("load", ()=>{
 
             if(e.classList.contains("key-numeric")){
                 $numericKeyboard.classList.toggle("-numeric-list");
+            }
+
+            if(e.classList.contains("key-symbol")){
+                $symbolKeyboard.classList.toggle("-symbol-list");
             }
         });
     });
