@@ -131,7 +131,7 @@ nav.main-keyboard div.keyboard-list button::-moz-selection{
 }
 
 nav.main-keyboard div.keyboard-list button.key.space{
-    width: 68%;
+    width: 360.484px    
 }
 
 nav.main-keyboard div.keyboard-list button.key.backspace i,
@@ -140,8 +140,13 @@ nav.main-keyboard div.keyboard-list button.key.capslock i{
 }
 
 nav.main-keyboard div.keyboard-list button.key.clear i,
-nav.main-keyboard div.keyboard-list button.key.key-symbol i{
+nav.main-keyboard div.keyboard-list button.key.specials i,
+nav.main-keyboard div.keyboard-list button.key.key-numeric i{
     transform: scale(0.75);
+}
+
+nav.main-keyboard div.keyboard-list button.key.key-symbol i{
+    transform: scale(0.55);
 }
 
 nav.main-keyboard div.keyboard-list button.key.-caps-active{
