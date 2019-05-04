@@ -40,6 +40,9 @@ window.addEventListener("load", ()=>{
                     // seto uma classe que dará o efeito de capslock nos itens do meu array
                     t.classList.toggle("-caps-active");
                 });
+                // Adicionando Efeito de botão ativo no elemento
+                e.classList.toggle("is-active");
+                
                 // removo o efeito de capslock da tecla capslock
                 e.classList.remove("-caps-active");
             }   
@@ -76,11 +79,19 @@ window.addEventListener("load", ()=>{
             }
 
             if(e.classList.contains("key-numeric")){
+                // Crio o efeito toggle no teclado numerico
                 $numericKeyboard.classList.toggle("-numeric-list");
+
+                // Adicionando Efeito de botão ativo no elemento
+                e.classList.toggle("is-active");
             }
 
             if(e.classList.contains("key-symbol")){
+                // Crio o efeito toggle no teclado de caracteres especiais
                 $symbolKeyboard.classList.toggle("-symbol-list");
+
+                // Adicionando Efeito de botão ativo no elemento
+                e.classList.toggle("is-active");
             }
         });
     });
