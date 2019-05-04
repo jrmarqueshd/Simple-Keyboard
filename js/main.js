@@ -22,8 +22,31 @@ window.addEventListener("load", ()=>{
             // *** ( $input.value = ... ) Dessa forma eu já imprimo o valor direto no .value do meu elemento
 
             // **** Fonte principal de pesquisa ( https://www.youtube.com/watch?v=dbVHI0x3lj0&t=336s ).
-
             $input.value = $input.value + e.value;
+
+            // CapsLock
+            // * e.classList.contains eu faço a verificação se o elemento tem a classe capslock
+            if(e.classList.contains("capslock")){
+                // percorro todos os itens do meu array
+                $keyboard.forEach((t)=>{
+                    // seto uma classe que dará o efeito de capslock nos itens do meu array
+                    t.classList.toggle("-caps-active");
+                });
+                // removo o efeito de capslock da tecla capslock
+                e.classList.remove("-caps-active");
+            }   
+
+            // verifico se os itens do meu array possuem a classe -caps-active
+            if(e.classList.contains("-caps-active")){
+                // declarei uma variável rem
+                // * rem terá a principal função de remover o último item da minha lista para a atribuição seguinte
+                // * funcionar da maneira correta ao qual foi proposto
+                let rem = $input.value.substring(0, ($input.value.length - 1));
+                // $input.value pego o valor atual do meu input
+                // * rem + e.value.toUpperCase() indico que removerá o último valor do input e atribuirá
+                // * o novo valor, que no caso é maiusculo
+                $input.value = rem + e.value.toUpperCase();
+            }
 
             // Limpar o campo
             // * Verifico se o elemento clicado contem a classe clear
@@ -42,19 +65,6 @@ window.addEventListener("load", ()=>{
                 // ** Fonte principal de pesquisa ( http://rogeralmeida.com.br/blog/2011/06/03/retirar-ultimo-caractere-de-string-em-javascript-e-php/ ).
                 // ** Fonte principal de pesquisa ( https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring ). 
                 $input.value = $input.value.substring(0, ($input.value.length - 1));
-            }
-
-            if(e.classList.contains("capslock")){
-                
-                $keyboard.forEach((t)=>{
-                    t.classList.toggle("-caps-active");
-                });
-                e.classList.remove("-caps-active");
-            }   
-
-            if(e.classList.contains("-caps-active")){
-                let rem = $input.value.substring(0, ($input.value.length - 1))
-                $input.value = rem + e.value.toUpperCase();
             }
         });
     });
