@@ -134,6 +134,16 @@ nav.main-keyboard div.keyboard-list button.key.space{
     width: 68%;
 }
 
+nav.main-keyboard div.keyboard-list button.key.backspace i,
+nav.main-keyboard div.keyboard-list button.key.capslock i{
+    transform: scale(0.75) translateX(-3px);
+}
+
+nav.main-keyboard div.keyboard-list button.key.clear i,
+nav.main-keyboard div.keyboard-list button.key.key-symbol i{
+    transform: scale(0.75);
+}
+
 nav.main-keyboard div.keyboard-list button.key.-caps-active{
     text-transform: uppercase;
 }
