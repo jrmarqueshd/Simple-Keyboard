@@ -42,7 +42,7 @@ window.addEventListener("load", ()=>{
                 });
                 // Adicionando Efeito de botão ativo no elemento
                 e.classList.toggle("is-active");
-                
+
                 // removo o efeito de capslock da tecla capslock
                 e.classList.remove("-caps-active");
             }   
@@ -63,7 +63,48 @@ window.addEventListener("load", ()=>{
             // * Verifico se o elemento clicado contem a classe clear
             if(e.classList.contains("clear")){
                 // se tiver a classe clear, ela limpa o conteúdo do input
-                $input.value = "";
+
+                // Declaro uma variável para utilizar como parametro de verificação
+                var clearContent = 0;
+
+                // inicío uma verificação try para verificar duas possibilidade
+                try {
+                    // A primeira verificará se o input já está com o value vazio
+                    // * Caso o retorno dessa condição seja verdadeiro eu simplesmente lanço a exception para o
+                    // * catch informando que o campo já está vazio.
+                    if($input.value == ""){
+                        // utilizo a variável para definir um valor único informando para o catch que é essa a opção
+                        // válida para a tratativa
+                        clearContent = 0;
+                        throw "O campo já está vazio.";
+                    }
+
+                    // A Segunda também verificará se o input está com o value vazio
+                    // * Nesse caso se a condição retornar false, ele usará a variável de verificação para
+                    // * informar ao catch que, aquela condição será a válida na tratativa
+                    // ** E em seguida lanço uma exception para o catch
+                    if($input.value != ""){
+                        // utilizo a variável para definir um valor único informando para o catch que é essa a opção
+                        // válida para a tratativa
+                        clearContent = 1;
+                        throw "Tem certeza que deseja apagar o conteúdo?";
+                    } 
+                } catch (err) {
+                    // Caso a segunda verificação acima seja verdadeira, inicio uma verificação para analisar
+                    // o valor da minha variavel de verificação
+                    if(clearContent == 1){
+                        // Seto uma nova variável que receberá o valor da exception criada na segunda verificação
+                        // * Utilizo confirm() que é um recurso do browser para tratativa de decisão.
+                        let acception = confirm(err);
+                        // inicio uma nova verificação para assistir a ação do usuário
+                        // * Caso a ação do usuário seja positiva a verificação limpará o input
+                        // ** Caso tenha um retorno negativo, o input continuará com o value anterior.
+                        if(acception == true) $input.value = "";
+                    }
+                    
+                    // alerta em um popup que o campo já está vazio.
+                    alert(err);  
+                }
             }
 
             // Apagar último digito do campo
