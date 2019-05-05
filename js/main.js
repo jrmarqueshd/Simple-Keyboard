@@ -157,14 +157,20 @@ window.addEventListener("load", ()=>{
         });
     });
 
+    // Percorro cada elemento da seção de dominios de e-mail
     $eachEmailDomain.forEach((ed)=>{
+        // defino um evento para o clique
         ed.addEventListener("click", ()=>{
+            // adiciono um classe que esconde a seção de e-mail por completo
             $emailDomains.classList.add("-hidden");
         });
     });
 
+    // Percorro cada elemento da seção de dominios de url
     $eachUrlDomain.forEach((eu)=>{
+        // defino um evento para o clique
         eu.addEventListener("click", ()=>{
+            // adiciono um classe que esconde a seção de url por completo
             $siteDomains.classList.add("-hidden");
         });
     })
