@@ -3,6 +3,14 @@ window.addEventListener("load", ()=>{
     // Chamando o input do formulário
     let $input = document.getElementById("input");
 
+    // chamando as seções de dominios
+    let $emailDomains = document.getElementById("emailDomains");
+    let $siteDomains = document.getElementById("siteDomains");
+
+    // chamando cada elemento dos dominios
+    let $eachEmailDomain = document.querySelectorAll(".key-email");
+    let $eachUrlDomain = document.querySelectorAll(".key-url");
+
     // Chamando cada tecla do teclado virtual
     // * O value do elemento já foi setado diretamente no próprio HTML
     let $keyboard = document.querySelectorAll(".key");
@@ -14,6 +22,10 @@ window.addEventListener("load", ()=>{
     // Chamando o teclado de caracteres especiais
     // * Esse elemento já está setado com display none por default
     let $symbolKeyboard = document.getElementById("symbolList");
+
+    // Chamando o teclado de dominios ágeis
+    // * Esse elemento já está setado com display none por default
+    let $domainsKeyboard = document.getElementById("domainList");
 
     // Percorrendo todos os elementos do meu teclado para te-los carregados na window
     $keyboard.forEach((e)=>{
@@ -101,9 +113,9 @@ window.addEventListener("load", ()=>{
                         // ** Caso tenha um retorno negativo, o input continuará com o value anterior.
                         if(acception == true) $input.value = "";
                     }
-                    
+
                     // alerta em um popup que o campo já está vazio.
-                    alert(err);  
+                    alert(err);
                 }
             }
 
@@ -134,6 +146,26 @@ window.addEventListener("load", ()=>{
                 // Adicionando Efeito de botão ativo no elemento
                 e.classList.toggle("is-active");
             }
+
+            if(e.classList.contains("specials")){
+
+                $domainsKeyboard.classList.toggle("-domains-list");
+
+                // Adicionando Efeito de botão ativo no elemento
+                e.classList.toggle("is-active");
+            }
         });
     });
+
+    $eachEmailDomain.forEach((ed)=>{
+        ed.addEventListener("click", ()=>{
+            $emailDomains.classList.add("-hidden");
+        });
+    });
+
+    $eachUrlDomain.forEach((eu)=>{
+        eu.addEventListener("click", ()=>{
+            $siteDomains.classList.add("-hidden");
+        });
+    })
 });

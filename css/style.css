@@ -90,6 +90,18 @@ nav.main-keyboard div.keyboard-list{
     text-align: center;
 }
 
+nav.main-keyboard div.keyboard-domain-list.-domains-list{
+    display: none;
+}
+
+nav.main-keyboard div.keyboard-domain-list .list-domains{
+    text-align: center;
+}
+
+nav.main-keyboard div.keyboard-domain-list .list-domains.-hidden{
+    display: none;
+}
+
 nav.main-keyboard div.keyboard-list.-numeric-list,
 nav.main-keyboard div.keyboard-list.-symbol-list{
     display: none;
@@ -118,7 +130,24 @@ nav.main-keyboard div.keyboard-list button{
     width: 60px;
 }
 
+nav.main-keyboard div.keyboard-domain-list button{
+    animation: keyAnimation 987ms ease-in-out;
+        -moz-animation: keyAnimation 987ms ease-in-out;
+        -ms-zoom-animation: keyAnimation 987ms ease-in-out;
+        -o-animation: keyAnimation 987ms ease-in-out;
+        -webkit-animation: keyAnimation 987ms ease-in-out;
+    background-color: #F0F0F0;  
+    border: 1px solid #3C618E;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+}
+
 nav.main-keyboard div.keyboard-list button:hover,
+nav.main-keyboard div.keyboard-domain-list button:hover,
 nav.main-keyboard div.keyboard-list button.key.is-active{
     background-color: #3C618E;
     box-shadow: 0px 0px 4px #000;
