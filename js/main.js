@@ -112,10 +112,10 @@ window.addEventListener("load", ()=>{
                         // * Caso a ação do usuário seja positiva a verificação limpará o input
                         // ** Caso tenha um retorno negativo, o input continuará com o value anterior.
                         if(acception == true) $input.value = "";
+                    }else{
+                        // alerta em um popup que o campo já está vazio.
+                        alert(err);
                     }
-
-                    // alerta em um popup que o campo já está vazio.
-                    alert(err);
                 }
             }
 
